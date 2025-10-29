@@ -28,8 +28,8 @@ namespace SauceDemo.Features
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Login Functionality", ("\tAs a SauceDemo user\r\n\tI want to log in with valid credentials\r\n\tSO I can see the" +
-                " product inventory"), global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Login Functionality", "\tAs a SauceDemo user\r\n\tI want to log in with valid credentials\r\n\tSO I can see the" +
+                " product inventory", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
 #line 1 "Login.feature"
 #line hidden
