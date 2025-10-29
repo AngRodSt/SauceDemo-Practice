@@ -1,0 +1,124 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\saucedemo\\saucedemo - project\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|solutionrelative:saucedemo - project\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\saucedemo\\saucedemo - project\\.github\\workflows\\test-pipeline.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|solutionrelative:saucedemo - project\\.github\\workflows\\test-pipeline.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\saucedemo\\saucedemo - project\\stepdefinitions\\loginsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|solutionrelative:saucedemo - project\\stepdefinitions\\loginsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\saucedemo\\saucedemo - project\\features\\login.feature||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|solutionrelative:saucedemo - project\\features\\login.feature||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\saucedemo\\saucedemo - project\\hooks\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|solutionrelative:saucedemo - project\\hooks\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\saucedemo\\saucedemo - project\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|solutionrelative:saucedemo - project\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\.gitignore",
+              "RelativeDocumentMoniker": "SauceDemo - Project\\.gitignore",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\.gitignore",
+              "RelativeToolTip": "SauceDemo - Project\\.gitignore",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-29T23:22:16.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "test-pipeline.yml",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\.github\\workflows\\test-pipeline.yml",
+              "RelativeDocumentMoniker": "SauceDemo - Project\\.github\\workflows\\test-pipeline.yml",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\.github\\workflows\\test-pipeline.yml",
+              "RelativeToolTip": "SauceDemo - Project\\.github\\workflows\\test-pipeline.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-10-29T23:11:52.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Hooks.cs",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\Hooks\\Hooks.cs",
+              "RelativeDocumentMoniker": "SauceDemo - Project\\Hooks\\Hooks.cs",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\Hooks\\Hooks.cs",
+              "RelativeToolTip": "SauceDemo - Project\\Hooks\\Hooks.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T22:49:59.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginSteps.cs",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\StepDefinitions\\LoginSteps.cs",
+              "RelativeDocumentMoniker": "SauceDemo - Project\\StepDefinitions\\LoginSteps.cs",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\StepDefinitions\\LoginSteps.cs",
+              "RelativeToolTip": "SauceDemo - Project\\StepDefinitions\\LoginSteps.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T22:42:27.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginPage.cs",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\Pages\\LoginPage.cs",
+              "RelativeDocumentMoniker": "SauceDemo - Project\\Pages\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\Pages\\LoginPage.cs",
+              "RelativeToolTip": "SauceDemo - Project\\Pages\\LoginPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T22:34:06.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.feature",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\Features\\Login.feature",
+              "RelativeDocumentMoniker": "SauceDemo - Project\\Features\\Login.feature",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\Features\\Login.feature",
+              "RelativeToolTip": "SauceDemo - Project\\Features\\Login.feature",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI8SURBVDhPddBPiNR1GMfx1/c36\u002Bx/29Ylf7NUrriiKIhhHYKgdMMgukXNEBSCFEInb3WKghYCIRBBOnjpoLOHBMsOQaBQQhc71EFrUwmUmdm1Nqddnd119tth9zc7s9hz\u002B36ez\u002Bf9PN8neFSdSwcFe7AdDwW3NF33VnWhwxdjDJ0CptIjOI496FrrLOFXTCpVz7dH1gHltAcn8D50J3mLK0uSkOhO8h40G5nzAyGcUKw0IWkBeA/HYO9ju/w4ccHezbu8M/aGy4fOC\u002BuzPhLjy9ljFVBOh/AJcsP5IfXledv6n/L8yLNeLUy4//CBKGaZXnzqm9Gg9YVyWkR5W/\u002BTLh38yve1H3z\u002B2xf\u002BXvrHcH7IX4tzZhbvZgBr19qpVL2RfWE/3LlfcebmWV0hp9aYVWvMulaf3hi2Nni/tht0QTOu\u002BHPhtmv1aY3mYss9PjBmct\u002BHDqcvtTT0awPchPHB7U4dmHRo6wtGurfYkn9coecJuZDzSnrQ6QOftQNua91gKt0h\u002Bj0IyY6BMfeW665MfO3k9Bm7N4/bPTju9StH9eX6VBo1aBC3KtXqqxsUqzfwZRT9MX/L4KYBISR\u002BnvvFT3evGu1NNeNKFoazSrX6\u002BgZQTkdxEc/AcH7I3NI9SUj0dfX6d3k\u002Bc84I8UXF2vVOAJxLRwSn8Rp6OnqrtYCiUvXbTOgEwFRhk\u002Bg54jG83dap4l2l6sU27RGArKYKh8X4He7gAuFjpcrMRtv/A8qFp4n7cFXSrHhzdqMD/AfXwLdp/4rZ5QAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-10-29T22:30:33.092Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

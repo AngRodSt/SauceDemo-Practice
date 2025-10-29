@@ -1,0 +1,38 @@
+# Ignore Visual Studio temp files, build results, and caches
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+TestResults/
+*.log
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# User-specific files
+*.swp
+*.bak
+*.tmp
+*.userprefs
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+
+# Windows image cache
+Thumbs.db
+ehthumbs.db
+
+# JetBrains Rider
+.idea/
+*.iml
+
+# Others
+.DS_Store
