@@ -1,27 +1,39 @@
-﻿using OpenQA.Selenium;
+﻿// Drivers/WebDriverFactory.cs
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Remote;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
-namespace ReqnrollProject1.Drivers
+public static class WebDriverFactory
 {
-    public static class WebDriverFactory
+    public static IWebDriver CreateDriver(string browser = "chrome", bool headless = true)
     {
-        public static IWebDriver Create()
+      
+        if (browser.Equals("chrome", StringComparison.OrdinalIgnoreCase))
         {
             var options = new ChromeOptions();
-            options.AddArgument("--headless=new"); 
+            if (headless) options.AddArgument("--headless=new");
             options.AddArgument("--no-sandbox");
             options.AddArgument("--disable-dev-shm-usage");
             options.AddArgument("--disable-gpu");
             options.AddArgument("--window-size=1920,1080");
             options.AddArgument("--disable-extensions");
-            options.AddArgument("--remote-debugging-port=9222");
-            options.AddArgument("--user-data-dir=/tmp/chrome-user-data"); 
-            return new ChromeDriver(options);
+            // unique profile per process to avoid "user data dir in use"
+            var tempProfile = Path.Combine(Path.GetTempPath(), "chrome-profile-" + Guid.NewGuid());
+            Directory.CreateDirectory(tempProfile);
+            options.AddArgument($"--user-data-dir={tempProfile}");
+
+            // avoid locking issues (optional cleanup strategy)
+            var driverService = ChromeDriverService.CreateDefaultService();
+            driverService.SuppressInitialDiagnosticInformation = true;
+            driverService.HideCommandPromptWindow = true;
+
+            return new ChromeDriver(driverService, options, TimeSpan.FromSeconds(60));
         }
+
+        throw new NotSupportedException($"Browser {browser} not supported.");
     }
+
+  
 }

@@ -1,11 +1,8 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using Reqnroll;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,7 +34,7 @@ namespace SauceDemo.Hooks
                     var dir = Path.Combine(Directory.GetCurrentDirectory(), "TestResults", "Screenshots");
                     Directory.CreateDirectory(dir);
                     var file = Path.Combine(dir, $"{SanitizeFileName(ctx.ScenarioInfo.Title)}_{DateTime.Now:yyyyMMdd_HHmmss}.png");
-                    screenshot.SaveAsFile(file);
+                    screenshot.SaveAsFile(file, ScreenShotImageFormat.Png);
                     TestContext.AddTestAttachment(file, "Failure screenshot");
                     Console.WriteLine($"Screenshot saved: {file}");
                 }

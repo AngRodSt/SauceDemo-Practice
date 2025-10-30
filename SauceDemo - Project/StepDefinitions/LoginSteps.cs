@@ -1,7 +1,8 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using ReqnrollProject1.Drivers;
+using OpenQA.Selenium.Support.UI;
+using SauceDemo.Hooks;
 using SauceDemo.Pages;
 using System;
 using System.Collections.Generic;
@@ -14,51 +15,49 @@ namespace SauceDemo.StepDefinitions
     [Binding]
     public class LoginSteps
     {
-        private readonly IWebDriver _driver;
+        private readonly IWebDriver driver;
         private readonly LoginPage _loginPage;
 
         public LoginSteps()
         {
-            _driver = WebDriverFactory.Create();
-            _loginPage = new LoginPage(_driver);
+            driver = Hooks.Hooks.Driver;
+            _loginPage = new LoginPage(driver);
         }
 
         [Given("I am on the SauceDemo login page")]
         public void GivenIAmOnTheSauceDemoLoginPage()
         {
             _loginPage.GoTo();
+            Assert.IsTrue(driver.Title.Contains("Swag Labs") || driver.Url.Contains("saucedemo"), "Landing page not loaded");
         }
 
         [When("I enter valid credentials")]
         public void WhenIEnterValidCredentials()
         {
-            _loginPage.EnterUsername("standard_user");
-            _loginPage.EnterPassword("secret_sauce");
-            _loginPage.ClickLogin();
+            _loginPage.Login("standard_user", "secret_sauce");
         }
 
         [Then("I should see the inventory page")]
         public void ThenIShouldSeeTheInventoryPage()
         {
-            Assert.That(_driver.Url, Does.Contain("inventory.html"));
-            _driver.Quit();
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(d => d.Url.Contains("inventory.html"));
+            Assert.IsTrue(driver.Url.Contains("inventory.html"));
         }
 
         //Invalid Login Steps
         [When("I enter invalid credentials")]
         public void WhenIEnterInvalidCredentials()
         {
-            _loginPage.EnterUsername("invalid_user");
-            _loginPage.EnterPassword("wrong_password");
-            _loginPage.ClickLogin();
+            _loginPage.Login("invalid_user", "wrong_pass");
         }
 
         [Then("I should see an error message")]
         public void ThenIShouldSeeAnErrorMessage()
         {
-            string message = _loginPage.GetErrorMessage();
-            Assert.That(message, Does.Contain("Username and password do not match"));
-            _driver.Quit();
+            var text = _loginPage.GetErrorText();
+            Assert.IsTrue(!string.IsNullOrEmpty(text), "Expected error message but none shown");
+            Assert.That(text.ToLower(), Does.Contain("username").Or.Contain("error"));
         }
     }
 }

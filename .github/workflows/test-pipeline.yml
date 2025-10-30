@@ -1,35 +1,45 @@
 name: Run Automated Tests
 
-on:
-    push:
-        branches: [main, developer]
-    pull_request:
-        branches: [main]
+on: [push, pull_request]
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chrome]          
+        headless: [true]
+    steps:
+      - uses: actions/checkout@v4
 
-        steps:
-          - name: Checkout code
-            uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
 
-          - name: Setup .NET
-            uses: actions/setup-dotnet@v4
-            with:
-              dotnet-version: '8.0.x'
+      - name: Install Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget gnupg2
+          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
 
-          - name: Restore dependencies
-            run: dotnet restore
+      - name: Restore
+        run: dotnet restore
 
-          - name: Build project
-            run: dotnet build --no-restore
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
 
-          - name: Run all tests
-            run: dotnet test --logger "trx;LogFileName=test_results.trx" --results-directory ./TestResults
+      - name: Run tests (matrix)
+        env:
+          TEST_BROWSER: ${{ matrix.browser }}
+          HEADLESS: ${{ matrix.headless }}
+        run: dotnet test --logger "trx;LogFileName=test_results.trx" --results-directory ./TestResults
 
-          - name: Upload test results
-            uses: actions/upload-artifact@v4
-            with:
-              name: TestResults
-              path: ./TestResults
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestResults
+          path: TestResults/

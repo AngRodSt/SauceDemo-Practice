@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|solutionrelative:saucedemo - project\\drivers\\webdriverfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\saucedemo\\saucedemo - project\\stepdefinitions\\loginsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|solutionrelative:saucedemo - project\\stepdefinitions\\loginsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\saucedemo\\saucedemo - project\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|solutionrelative:saucedemo - project\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
@@ -21,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\saucedemo\\saucedemo - project\\hooks\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|solutionrelative:saucedemo - project\\hooks\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\saucedemo\\saucedemo - project\\stepdefinitions\\loginsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|solutionrelative:saucedemo - project\\stepdefinitions\\loginsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E9EEC6B8-D784-4AF3-B7E7-4F3EC69D694C}|SauceDemo - Project\\SauceDemo.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\saucedemo\\saucedemo - project\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\.gitignore",
               "RelativeDocumentMoniker": "SauceDemo - Project\\.gitignore",
@@ -67,12 +67,11 @@
               "RelativeToolTip": "SauceDemo - Project\\.gitignore",
               "ViewState": "AgIAACYAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-29T23:22:16.033Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T23:22:16.033Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "test-pipeline.yml",
               "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\.github\\workflows\\test-pipeline.yml",
               "RelativeDocumentMoniker": "SauceDemo - Project\\.github\\workflows\\test-pipeline.yml",
@@ -84,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Hooks.cs",
               "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\Hooks\\Hooks.cs",
               "RelativeDocumentMoniker": "SauceDemo - Project\\Hooks\\Hooks.cs",
@@ -96,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "LoginSteps.cs",
               "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\SauceDemo\\SauceDemo - Project\\StepDefinitions\\LoginSteps.cs",
               "RelativeDocumentMoniker": "SauceDemo - Project\\StepDefinitions\\LoginSteps.cs",
@@ -104,8 +103,7 @@
               "RelativeToolTip": "SauceDemo - Project\\StepDefinitions\\LoginSteps.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T22:42:27.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T22:42:27.804Z"
             },
             {
               "$type": "Document",

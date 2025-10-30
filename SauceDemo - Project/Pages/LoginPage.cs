@@ -7,28 +7,31 @@ using System.Threading.Tasks;
 
 namespace SauceDemo.Pages
 {
-    public class LoginPage
+    public class LoginPage : BasePage
     {
-        private readonly IWebDriver driver;
-
+        
         //Constructor
-        public LoginPage(IWebDriver driver)
-        {
-            this.driver = driver;
-        }
+        public LoginPage(IWebDriver driver) : base(driver) { }
 
         //Locators
         private readonly By usernameInput = By.Id("user-name");
         private readonly By passwordInput = By.Id("password");
         private readonly By loginButton = By.Id("login-button");
         private readonly By errorMessage = By.CssSelector("h3[data-test='error']");
+        private readonly string url = "https://www.saucedemo.com/";
 
         //Methods
-        public void GoTo()=> driver.Navigate().GoToUrl("https://www.saucedemo.com/");
-        public void EnterUsername(string username) => driver.FindElement(usernameInput).SendKeys(username);
-        public void EnterPassword(string password) => driver.FindElement(passwordInput).SendKeys(password);
-        public void ClickLogin() => driver.FindElement(loginButton).Click();
-        public string GetErrorMessage() => driver.FindElement(errorMessage).Text;
+        public void GoTo()=> Driver.Navigate().GoToUrl(url);
+        public void Login(string user, string password)
+        {
+            WaitAndSendKeys(usernameInput, user);
+            WaitAndSendKeys(passwordInput, password);
+            WaitAndClick(loginButton);
+        }
+       public string GetErrorText()
+       {
+            return IsElementPresent(errorMessage, 2) ? WaitAndFind(errorMessage).Text : string.Empty;
+       }
 
 
     }
