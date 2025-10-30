@@ -2,19 +2,21 @@
 using OpenQA.Selenium;
 using Reqnroll;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SauceDemo.Hooks
 {
     [Binding]
     public class Hooks
     {
-        public static IWebDriver Driver;
+        public static IWebDriver? Driver { get; private set; }
+        private readonly ScenarioContext _scenarioContext;
+
+ 
+        public Hooks(ScenarioContext scenarioContext)
+        {
+            _scenarioContext = scenarioContext;
+        }
 
         [BeforeScenario]
         public void BeforeScenario()
@@ -28,22 +30,25 @@ namespace SauceDemo.Hooks
         [AfterStep]
         public void AfterStep()
         {
-            var ctx = ScenarioContext.Current;
-            if (ctx.TestError != null)
+            if (_scenarioContext.TestError != null && Driver != null)
             {
                 try
                 {
                     var screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
                     var dir = Path.Combine(Directory.GetCurrentDirectory(), "TestResults", "Screenshots");
                     Directory.CreateDirectory(dir);
-                    var file = Path.Combine(dir, $"{SanitizeFileName(ctx.ScenarioInfo.Title)}_{DateTime.Now:yyyyMMdd_HHmmss}.png");
-                    screenshot.SaveAsFile(file);
-                    TestContext.AddTestAttachment(file, "Failure screenshot");
-                    Console.WriteLine($"Screenshot saved: {file}");
+
+                    var fileName = $"{SanitizeFileName(_scenarioContext.ScenarioInfo.Title)}_{DateTime.Now:yyyyMMdd_HHmmss}.png";
+                    var filePath = Path.Combine(dir, fileName);
+
+                    screenshot.SaveAsFile(filePath);
+                    TestContext.AddTestAttachment(filePath, "Failure screenshot");
+
+                    Console.WriteLine($"Screenshot saved: {filePath}");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Failed to capture screenshot: " + ex);
+                    Console.WriteLine($"Failed to capture screenshot: {ex.Message}");
                 }
             }
         }
@@ -56,12 +61,16 @@ namespace SauceDemo.Hooks
                 Driver?.Quit();
                 Driver?.Dispose();
             }
-            catch { /* best-effort cleanup */ }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error while closing WebDriver: {ex.Message}");
+            }
         }
 
         private string SanitizeFileName(string name)
         {
-            foreach (var c in Path.GetInvalidFileNameChars()) name = name.Replace(c, '_');
+            foreach (var c in Path.GetInvalidFileNameChars())
+                name = name.Replace(c, '_');
             return name;
         }
     }

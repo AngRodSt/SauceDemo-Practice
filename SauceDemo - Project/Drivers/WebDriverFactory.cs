@@ -4,6 +4,8 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Remote;
 using System;
 using System.IO;
+using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
 
 public static class WebDriverFactory
 {
@@ -12,6 +14,7 @@ public static class WebDriverFactory
       
         if (browser.Equals("chrome", StringComparison.OrdinalIgnoreCase))
         {
+            new DriverManager().SetUpDriver(new ChromeConfig());
             var options = new ChromeOptions();
             if (headless) options.AddArgument("--headless=new");
             options.AddArgument("--no-sandbox");
